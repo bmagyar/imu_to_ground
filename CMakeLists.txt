@@ -19,21 +19,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-#add_executable(imu_to_ground_node src/imu_to_ground_node.cpp)
-#target_link_libraries(imu_to_ground_node ${catkin_LIBRARIES})
-
 add_executable(quat_to_imu src/quat_to_imu_node.cpp)
 target_link_libraries(quat_to_imu ${catkin_LIBRARIES})
 
-
-## Add cmake target dependencies of the executable/library
-## as an example, message headers may need to be generated before nodes
-# add_dependencies(imu_to_ground_node imu_to_ground_generate_messages_cpp)
-
-## Specify libraries to link a library or executable target against
-# target_link_libraries(imu_to_ground_node
-#   ${catkin_LIBRARIES}
-# )
+add_executable(quat_to_ground src/quat_to_ground_node.cpp)
+target_link_libraries(quat_to_ground ${catkin_LIBRARIES})
 
 #############
 ## Install ##
