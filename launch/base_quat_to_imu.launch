@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="imu_to_ground" type="quat_to_imu" name="base_quat_to_imu">
+    <remap from="quat" to="/tiva/base_imu"/>
+    <remap from="imu" to="/base_imu"/>
+  </node>
+</launch>
